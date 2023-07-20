@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 <body style="padding: 60px 0;">
     <div id="app">
@@ -24,5 +25,6 @@
         </main>
             @include('layouts.footer')
     </div>
+        @stack('scripts')
 </body>
 </html>

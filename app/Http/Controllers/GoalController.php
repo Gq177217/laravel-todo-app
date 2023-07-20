@@ -17,7 +17,9 @@ class GoalController extends Controller
     {
         //
         $goals = Auth::user()->goals;
-        return view('goals.index', compact('goals'));
+        $tags = Auth::user()->tags;
+
+        return view('goals.index', compact('goals', 'tags'));
     }
     /**
      * Store a newly created resource in storage.
