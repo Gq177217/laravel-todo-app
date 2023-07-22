@@ -1,4 +1,4 @@
-<div class="modal fade"  id="editTagModal" tabindex="-1" aria-labelledby="editTagModalLabel">
+<div class="modal fade" id="editTagModal" tabindex="-1" aria-labelledby="editTagModalLabel">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -7,14 +7,14 @@
             </div>
             <form action="" method="post" name="editTagForm">
                 @csrf
-                @method('patch')
-                <div class="modal-body"> 
+                @method('patch')                                                                    
+                <div class="modal-body">
                     <input type="text" class="form-control" name="name" value="">
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">更新</button>
-                </div>
-            </form>
+                </div>   
+            </form>             
         </div>
     </div>
 </div>

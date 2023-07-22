@@ -1,5 +1,6 @@
- <!-- タグの編集用モーダル -->
+<!-- タグの編集用モーダル -->
 @include('modals.edit_tag')
+
 <!-- タグの削除用モーダル -->
 @include('modals.delete_tag')
 
@@ -16,12 +17,12 @@
                     <input type="text" class="form-control" name="name">
                     <div class="d-flex flex-wrap">
                         @foreach ($tags as $tag)
-                        <div class="d-flex align-items-center mt-3 me-3">
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }}" data-tag-name="{{ $tag->name }}">{{ $tag->name }}</button>
-                            <button type="button" class="btn-close ms-1" aria-label="削除" data-bs-toggle="modal" data-bs-target="#deleteTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id}}" data-tag-name="{{ $tag->name }}"></button>
-                        </div>
-                        @endforeach
-                    </div>
+                            <div class="d-flex align-items-center mt-3 me-3">                            
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }}" data-tag-name="{{ $tag->name }}">{{ $tag->name }}</button>
+                                <button type="button" class="btn-close ms-1" aria-label="削除" data-bs-toggle="modal" data-bs-target="#deleteTagModal" data-bs-dismiss="modal" data-tag-id="{{ $tag->id }}" data-tag-name="{{ $tag->name }}"></button>                                                 
+                            </div>
+                        @endforeach 
+                    </div>                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">登録</button>
